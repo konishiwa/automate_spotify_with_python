@@ -1,0 +1,13 @@
+Step 1: Map out all the steps used to create a playlist 
+  1. Log into Youtube
+  2. Grab Liked Videos
+  3. Create A New Playlist 
+  4. Add Song to New Spotify Playlist 
+
+Step 2: Research and find out what APIs are needed 
+  1. Youtube API
+  2. Spotify API 
+    2a. Register as a Developer on Spotify with your prexisting account 
+    2b. Go to "Create a Playlist" API
+  3. Github Youtube DL library
+
