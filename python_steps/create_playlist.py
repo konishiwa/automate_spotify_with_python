@@ -40,8 +40,25 @@ class CreatePlaylist:
 
 
     # 3b. Add spotify URI 
-    def get_spotify_uri(self):
-        pass
+    def get_spotify_uri(self, track, artist):
+
+        # searches for the song in spotify
+        query = "https://api.spotify.com/v1/search?type={}}%2C%20{}}".format(track, artist)
+        response = requests.get(
+            query,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": "Bearer {}".format(spotify_token) 
+            }
+        )
+        response_json = response.json()
+        #denotes what specific songs to add
+        songs = response_json["tracks"]["items"]
+        #return only the virst osng 
+        uri = songs[0]["uri"]
+        return uri
+
+
 
     # 4. Add Song to New Spotify Playlist 
     def add_new_song(self):
